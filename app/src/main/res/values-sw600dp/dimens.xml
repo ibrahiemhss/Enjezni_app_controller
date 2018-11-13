@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="match_parent" type="dimen">-1</item>
+    <dimen name="fab_elevation">6dp</dimen>
+    <dimen name="card_elevation">1dp</dimen>
+    <dimen name="fab_press_translation_z">12dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="app_par_elevation">4dp</dimen>
+
+    <!--TODO===== MainActivity ============================ -->
+    <!--NavigationView-->
+    <dimen name="main_nav_width">216dp</dimen>
+    <dimen name="main_nav_bottom_margin">8dp</dimen>
+    <!--app_bar_main-->
+    <dimen name="main_fab_margin">8dp</dimen>
+    <dimen name="main_fab_elevation">12dp</dimen>
+    <!--nav_header-->
+    <dimen name="nav_elevation">16dp</dimen>
+    <dimen name="nav_header_height">216dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_width">360dp</dimen>
+    <dimen name="nav_header_width">@dimen/match_parent</dimen>
+    <dimen name="nav_header_side_margin">16dp</dimen>
+    <dimen name="nav_header_circleimageview_width">96dp</dimen>
+    <dimen name="nav_header_txt_bottom_margin">2dp</dimen>
+    <dimen name="nav_header_txt_padding">2dp</dimen>
+    <dimen name="nav_child_view_side_margin">16dp</dimen>
+    <dimen name="nav_item_view_size">32dp</dimen>
+    <dimen name="nav_item_side_margin">4dp</dimen>
+    <dimen name="nav_item_include_height">240</dimen>
+
+
+    <!--TODO===== AddNewRestaurantFragment ============================ -->
+    <!-- Views -->
+    <!-- <dimen name="fr_rest_btn_top_margin">8dp</dimen>
+     <dimen name="fr_rest_btn_bottom_margin">8dp</dimen>-->
+    <dimen name="fr_rest_btn_side_margin">8dp</dimen>
+    <dimen name="fr_rest_lin_side_margin">16dp</dimen>
+    <dimen name="fr_rest_txt_side_margin">8dp</dimen>
+    <dimen name="fr_rest_img_side_margin">8dp</dimen>
+    <dimen name="fr_rest_img_width">48dp</dimen>
+    <dimen name="fr_rest_img_height">48dp</dimen>
+    <dimen name="fr_rest_etxt_side_margin">8dp</dimen>
+    <dimen name="fr_rest_txt_padding">4dp</dimen>
+
+    <!-- recyclerView -->
+    <dimen name="rv_side_padding">5dp</dimen>
+    <dimen name="rv_top_padding">8dp</dimen>
+    <dimen name="rv_bottom_padding">24dp</dimen>
+    <!-- list item -->
+
+    <dimen name="main_itemlist_bottom_margin">4dp</dimen>
+    <dimen name="main_itemlist_image_size">48dp</dimen>
+    <dimen name="main_itemlist_margin">8dp</dimen>
+    <dimen name="main_itemlist_image_padding">2dp</dimen>
+    <dimen name="main_itemlist_side_margin">16sp</dimen>
+    <dimen name="main_itemlist_text_size">22sp</dimen>
+
+    <!--TODO===== DetailsActivity ============================ -->
+
+    <!-- details list item -->
+
+    <dimen name="details_itemlist_text_side_margin">8dp</dimen>
+    <dimen name="details_itemlist_layout_margin">4dp</dimen>
+    <dimen name="details_itemlist_side_margin">12dp</dimen>
+    <dimen name="details_itemlist_text_top_margin">12dp</dimen>
+    <dimen name="details_itemlist_text_bottom_margin">4dp</dimen>
+    <dimen name="details_itemlist_text_size">16sp</dimen>
+
+    <!--TODO===== OrderActivity ============================ -->
+
+    <dimen name="order_layout_margin">16dp</dimen>
+    <dimen name="order_views_margin">4dp</dimen>
+    <dimen name="order_views_padding">4dp</dimen>
+    <dimen name="order_img_size">48dp</dimen>
+    <!--TODO===== LogInActivity ============================ -->
+    <!--  Linear Container View-->
+    <dimen name="lgn_container_side_margin">48dp</dimen>
+    <dimen name="lgn_container_width">336dp</dimen>
+    <dimen name="lgn_container_bottom_margin">24dp</dimen>
+    <!--  EditText  -->
+    <dimen name="lgn_edit_txt_top_margin">8dp</dimen>
+    <dimen name="lgn_edit_txt_padding">8dp</dimen>
+    <!--  Button -->
+    <dimen name="lgn_btn_top_margin">16dp</dimen>
+    <dimen name="lgn_btn_txt_size">16sp</dimen>
+    <!--  TextView -->
+    <dimen name="lgn_small_txt_size">16sp</dimen>
+
+    <!--TODO===== RegisterActivity ============================ -->
+    <!--  CircleImageView-->
+    <dimen name="rg_container_width">336dp</dimen>
+    <dimen name="rg_circleimageview_width">120dp</dimen>
+    <dimen name="rg_circleimageview_height">96dp</dimen>
+    <dimen name="rg_circleimageview_side_margin">16dp</dimen>
+    <dimen name="rg_progresspar_margin">32dp</dimen>
+    <!--  Linear Container View-->
+    <dimen name="rg_container_side_margin">48dp</dimen>
+    <!--  ImageView-->
+    <dimen name="rg_img_width">120dp</dimen>
+    <dimen name="rg_img_height">96dp</dimen>
+    <!--  TextInputLayout-->
+    <dimen name="rg_txt_input_bottom_margin">8dp</dimen>
+    <!--  EditText-->
+    <dimen name="rg_edit_txt_bottom_margin">8dp</dimen>
+    <dimen name="rg_edit_txt_top_margin">8dp</dimen>
+    <dimen name="rg_edit_txt_padding">8dp</dimen>
+    <!--  Button -->
+    <dimen name="rg_btn_top_margin">8dp</dimen>
+
+    <!--TODO===== ResetPasswordActivity ============================ -->
+    <!--TextView-->
+    <dimen name="reset_container_width">336dp</dimen>
+    <dimen name="reset_txt_title_size">24sp</dimen>
+    <!--  TextInputLayout-->
+    <dimen name="reset_txt_input_bottom_margin">8dp</dimen>
+    <dimen name="reset_txt_input_top_margin">8dp</dimen>
+
+    <dimen name="reset_txt_input_side_margin">48dp</dimen>
+    <!--  EditText-->
+    <dimen name="reset_edit_txt_padding">8dp</dimen>
+    <!--  Button -->
+    <dimen name="reset_btn_top_margin">16dp</dimen>
+    <dimen name="reset_btn_bottom_margin">8dp</dimen>
+    <dimen name="reset_btn_side_margin">48dp</dimen>
+    <!--  ProgressBar -->
+    <dimen name="reset_prgrsbar_top_margin">16dp</dimen>
+
+    <!--TODO===== ProfileActivity ============================ -->
+    <!--AppBarLayout-->
+    <dimen name="profile_app_bar_height">216dp</dimen>
+    <!--AppBarLayout-->
+    <dimen name="profile_circleimageview_width">120dp</dimen>
+    <dimen name="profile_circleimageview_height">96dp</dimen>
+    <dimen name="profile_circleimageview_side_margin">10dp</dimen>
+    <dimen name="profile_circleimageview_bottom_margin">8dp</dimen>
+    <dimen name="profile_img_edit_width">24dp</dimen>
+    <dimen name="profile_img_edit_height">24dp</dimen>
+    <!--  content activity_profile -->
+    <dimen name="profile_ptn_conf_padding">8dp</dimen>
+    <dimen name="profile_container_width">384dp</dimen>
+    <dimen name="profile_side_margin">16dp</dimen>
+    <dimen name="profile_txt_top_margin">8dp</dimen>
+    <dimen name="profile_btn_padding">8dp</dimen>
+    <dimen name="profile_btn_width">56dp</dimen>
+    <dimen name="profile_btn_height">32dp</dimen>
+
+    <!--confirm password dialog-->
+    <dimen name="conf_dialog_width">264dp</dimen>
+    <dimen name="conf_dialog_etext_content_size">16sp</dimen>
+    <dimen name="conf_dialog_etext_content_height">40dp</dimen>
+    <dimen name="conf_dialog_text_margin">8dp</dimen>
+    <dimen name="conf_dialog_text_size">12sp</dimen>
+    <dimen name="conf_dialog_text_padding">8dp</dimen>
+    <dimen name="conf_dialog_text_width">120dp</dimen>
+
+</resources>
