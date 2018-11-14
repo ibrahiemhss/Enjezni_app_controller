@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import com.delivery.arish.arishdelivery.R;
 import com.delivery.arish.arishdelivery.data.Contract;
-import com.delivery.arish.arishdelivery.data.SharedPrefManager;
 import com.delivery.arish.arishdelivery.internet.BaseApiService;
 import com.delivery.arish.arishdelivery.internet.UtilsApi;
 import com.delivery.arish.arishdelivery.internet.model.ResnponseApiModelAddData;
@@ -38,7 +37,7 @@ public class UpdateEditPresenter {
     private final Context mCtx;
     private final BaseApiService mApiService;
     private ProgressDialog mLoading;
-    private File mmIagefile1;
+    private File mImagefile;
     private MultipartBody.Part mPart;
     private static final String TAG = RegisterPresenter.class.getSimpleName();
 
@@ -49,8 +48,8 @@ public class UpdateEditPresenter {
 
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-////////////////////////////////////////////////add Retaurant  value to database////////////////////////////////////////////////////////////////////////
-    public void requestUpdateRetaurant(
+////////////////////////////////////////////////add Restaurant  value to database////////////////////////////////////////////////////////////////////////
+    public void requestUpdateRestaurant(
             String id_val,
             String old_part_img,//pass path the file of image as string from AddNewRestaurantFragment
             File myfile,//pass file  from AddNewRestaurantFragment
@@ -62,7 +61,7 @@ public class UpdateEditPresenter {
         mLoading = ProgressDialog.show(mCtx, null, mCtx.getResources().getString(R.string.creating_new), true, false);
 
         if (old_part_img != null) {
-            mmIagefile1 = new File(old_part_img);//initialize new file as file that come from string old_part_img this string come from parameter
+            mImagefile = new File(old_part_img);//initialize new file as file that come from string old_part_img this string come from parameter
 
 
             if (myfile != null) {/*all codes below inside this if statement
@@ -70,7 +69,7 @@ public class UpdateEditPresenter {
                               the file of our image before uploading to server*/
                 try {
                     try {
-                        mmIagefile1 = new Compressor(mCtx)
+                        mImagefile = new Compressor(mCtx)
                                 .setMaxWidth(640)
                                 .setMaxHeight(480)
                                 .setQuality(75)
@@ -89,17 +88,17 @@ public class UpdateEditPresenter {
         }
 
 
-        if (mmIagefile1 != null) {
+        if (mImagefile != null) {
             /*initialize new request created fom device files */
-            RequestBody reqBody = RequestBody.create(MediaType.parse(Contract.MULTIPART_FILE_PATH), mmIagefile1);
+            RequestBody reqBody = RequestBody.create(MediaType.parse(Contract.MULTIPART_FILE_PATH), mImagefile);
             /*make multipart request with our image file and our initialized requestBody*/
-            mPart = MultipartBody.Part.createFormData(Contract.PIC_TO_LOAD, mmIagefile1.getName(), reqBody);
+            mPart = MultipartBody.Part.createFormData(Contract.PIC_TO_LOAD, mImagefile.getName(), reqBody);
 
-        }else {
+        } else {
             /*initialize new request created fom device files */
             RequestBody reqBody = RequestBody.create(MediaType.parse(Contract.MULTIPART_FILE_PATH), "");
             /*make multipart request with our image file and our initialized requestBody*/
-            mPart = MultipartBody.Part.createFormData("","", reqBody);
+            mPart = MultipartBody.Part.createFormData("", "", reqBody);
 
         }
 
@@ -167,8 +166,8 @@ public class UpdateEditPresenter {
 
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-////////////////////////////////////////////////add Categoy  value to database////////////////////////////////////////////////////////////////////////
-    public void requestUpdateCategoy(
+////////////////////////////////////////////////add Category  value to database////////////////////////////////////////////////////////////////////////
+    public void requestUpdateCategory(
             String id_val,
             String old_part_img,//pass path the file of image as string from AddNewCategoryFragment
             File myfile,//pass file  from AddNewRestaurantFragment
@@ -180,7 +179,7 @@ public class UpdateEditPresenter {
         mLoading = ProgressDialog.show(mCtx, null, mCtx.getResources().getString(R.string.creating_new), true, false);
 
         if (old_part_img != null) {
-            mmIagefile1 = new File(old_part_img);//initialize new file as file that come from string old_part_img this string come from parameter
+            mImagefile = new File(old_part_img);//initialize new file as file that come from string old_part_img this string come from parameter
 
 
             if (myfile != null) {/*all codes below inside this if statement
@@ -188,7 +187,7 @@ public class UpdateEditPresenter {
                               the file of our image before uploading to server*/
                 try {
                     try {
-                        mmIagefile1 = new Compressor(mCtx)
+                        mImagefile = new Compressor(mCtx)
                                 .setMaxWidth(640)
                                 .setMaxHeight(480)
                                 .setQuality(75)
@@ -207,17 +206,17 @@ public class UpdateEditPresenter {
         }
 
 
-        if (mmIagefile1 != null) {
+        if (mImagefile != null) {
             /*initialize new request created fom device files */
-            RequestBody reqBody = RequestBody.create(MediaType.parse(Contract.MULTIPART_FILE_PATH), mmIagefile1);
+            RequestBody reqBody = RequestBody.create(MediaType.parse(Contract.MULTIPART_FILE_PATH), mImagefile);
             /*make multipart request with our image file and our initialized requestBody*/
-            mPart = MultipartBody.Part.createFormData(Contract.PIC_TO_LOAD, mmIagefile1.getName(), reqBody);
+            mPart = MultipartBody.Part.createFormData(Contract.PIC_TO_LOAD, mImagefile.getName(), reqBody);
 
-        }else {
+        } else {
             /*initialize new request created fom device files */
             RequestBody reqBody = RequestBody.create(MediaType.parse(Contract.MULTIPART_FILE_PATH), "");
             /*make multipart request with our image file and our initialized requestBody*/
-            mPart = MultipartBody.Part.createFormData("","", reqBody);
+            mPart = MultipartBody.Part.createFormData("", "", reqBody);
 
         }
 

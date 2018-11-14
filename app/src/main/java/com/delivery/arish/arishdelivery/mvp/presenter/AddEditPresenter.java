@@ -48,8 +48,8 @@ public class AddEditPresenter {
 
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-////////////////////////////////////////////////add Retaurant  value to database////////////////////////////////////////////////////////////////////////
-    public void requestAddNewRetaurant(
+////////////////////////////////////////////////add Restaurant  value to database////////////////////////////////////////////////////////////////////////
+    public void requestAddNewRestaurant(
             String old_part_img,//pass path the file of image as string from AddNewRestaurantFragment
             File myfile,//pass file  from AddNewRestaurantFragment
             String ar_nameval,//pass arabic name come from editText from AddNewRestaurantFragment
@@ -151,8 +151,8 @@ public class AddEditPresenter {
 
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-////////////////////////////////////////////////add Categoy  value to database////////////////////////////////////////////////////////////////////////
-    public void requestAddNewCategoy(
+////////////////////////////////////////////////add Category  value to database////////////////////////////////////////////////////////////////////////
+    public void requestAddNewCategory(
             String old_part_img,//pass path the file of image as string from AddNewCategoryFragment
             File myfile,//pass file  from AddNewRestaurantFragment
             String ar_nameval,//pass arabic name come from editText from AddNewCategoryFragment
@@ -195,11 +195,11 @@ public class AddEditPresenter {
 
         /*Because the ID in the service table is unique and not
         autoincrement, we must pass an ID value for the service table*/
-        int lastId=SharedPrefManager.getInstance(mCtx).getLastCtegoryId();
-        if(lastId==0){
-            lastId=1;//The first time data is added to the table id will be 1
-        }else {
-            lastId=lastId+1;//after id will increase +1
+        int lastId = SharedPrefManager.getInstance(mCtx).getLastCtegoryId();
+        if (lastId == 0) {
+            lastId = 1;//The first time data is added to the table id will be 1
+        } else {
+            lastId = lastId + 1;//after id will increase +1
             SharedPrefManager.getInstance(mCtx).saveLastCategoryId(lastId);
         }
 ///////////////////////////////////////////////////////////////////////////

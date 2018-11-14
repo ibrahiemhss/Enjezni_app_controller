@@ -3,13 +3,14 @@ package com.delivery.arish.arishdelivery.mvp.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class CategoryModel implements Parcelable{
+public class CategoryModel implements Parcelable {
 
-    private String ar_name,en_name,id,image_url;
+    private String ar_name, en_name, id, image_url;
 
     public CategoryModel() {
     }
 
+    @SuppressWarnings("unused")
     protected CategoryModel(Parcel in) {
 
         ar_name = in.readString();

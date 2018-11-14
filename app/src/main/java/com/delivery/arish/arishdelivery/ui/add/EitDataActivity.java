@@ -32,7 +32,7 @@ import java.util.Objects;
 
 import butterknife.BindView;
 
-public class EitDataActivity extends BaseActivity implements View.OnClickListener{
+public class EitDataActivity extends BaseActivity implements View.OnClickListener {
 
     private static final int PICK_IMAGE_REQUEST = 5;
     private static final String TAG = AddNewCategoryFragment.class.getSimpleName();
@@ -59,43 +59,48 @@ public class EitDataActivity extends BaseActivity implements View.OnClickListene
     private String mPart_image;
     private File mActualImageFile;
     private int mFragmentPosition;
-    private String mCategoryId,mRestaurantId;
+    private String mCategoryId, mRestaurantId;
 
     private UpdateEditPresenter mUpdateEditPresenter;
 
     private AddEditPresenter mAddPresenter;
+
     @Override
     protected void onViewReady(Bundle savedInstanceState, Intent intent) {
         super.onViewReady(savedInstanceState, intent);
 
         Bundle extras = getIntent().getExtras();
-        mAddPresenter=new AddEditPresenter(this);
-        mUpdateEditPresenter=new UpdateEditPresenter(this);
+        mAddPresenter = new AddEditPresenter(this);
+        mUpdateEditPresenter = new UpdateEditPresenter(this);
 
         assert extras != null;
         if (extras.containsKey(Contract.EXTRA_FRAGMENT_POSITION)) {
-            if(extras.containsKey(Contract.EXTRA_ID_RESTUARANT)||extras.containsKey(Contract.EXTRA_ID_CATEGORY)){
-                mCategoryId=extras.getString(Contract.EXTRA_ID_CATEGORY);
-                mRestaurantId=extras.getString(Contract.EXTRA_ID_RESTUARANT);
+            if (extras.containsKey(Contract.EXTRA_ID_RESTAURANT) || extras.containsKey(Contract.EXTRA_ID_CATEGORY)) {
+                mCategoryId = extras.getString(Contract.EXTRA_ID_CATEGORY);
+                mRestaurantId = extras.getString(Contract.EXTRA_ID_RESTAURANT);
 
             }
 
             mFragmentPosition = extras.getInt(Contract.EXTRA_FRAGMENT_POSITION, 0);
-            Toast.makeText(this,String.valueOf(mFragmentPosition),Toast.LENGTH_LONG).show();
-            if(mFragmentPosition==1){
+            Toast.makeText(this, String.valueOf(mFragmentPosition), Toast.LENGTH_LONG).show();
+            switch (mFragmentPosition) {
+                case 1:
 
-                mTxtCase.setText(R.string.click_add_image);
-            }else if(mFragmentPosition==2){
-                mTxtCase.setText(R.string.click_add_image);
+                    mTxtCase.setText(R.string.click_add_image);
+                    break;
+                case 2:
+                    mTxtCase.setText(R.string.click_add_image);
 
-            }else if(mFragmentPosition==3){
-                mTxtCase.setText(R.string.click_edit_image);
+                    break;
+                case 3:
+                    mTxtCase.setText(R.string.click_edit_image);
 
-            }else if(mFragmentPosition==4){
-                mTxtCase.setText(R.string.click_edit_image);
+                    break;
+                case 4:
+                    mTxtCase.setText(R.string.click_edit_image);
 
+                    break;
             }
-
 
 
         }
@@ -122,8 +127,8 @@ public class EitDataActivity extends BaseActivity implements View.OnClickListene
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onClick(View view) {
-        int id=view.getId();
-        switch (id){
+        int id = view.getId();
+        switch (id) {
             case R.id.img_add:
                 chooseImage();
                 break;
@@ -140,24 +145,24 @@ public class EitDataActivity extends BaseActivity implements View.OnClickListene
                     return;
 
                 }
-                if(mFragmentPosition==1){
-                    mAddPresenter.requestAddNewRetaurant(
+                if (mFragmentPosition == 1) {
+                    mAddPresenter.requestAddNewRestaurant(
                             mPart_image,
                             mActualImageFile,
                             mEtxtAddAr.getText().toString(),
                             mEtxtAddEn.getText().toString()
                     );
                 }
-                if(mFragmentPosition==2){
-                    mAddPresenter.requestAddNewCategoy(
+                if (mFragmentPosition == 2) {
+                    mAddPresenter.requestAddNewCategory(
                             mPart_image,
                             mActualImageFile,
                             mEtxtAddAr.getText().toString(),
                             mEtxtAddEn.getText().toString()
                     );
                 }
-                if(mFragmentPosition==3){
-                    mUpdateEditPresenter.requestUpdateRetaurant(
+                if (mFragmentPosition == 3) {
+                    mUpdateEditPresenter.requestUpdateRestaurant(
                             mRestaurantId,
                             mPart_image,
                             mActualImageFile,
@@ -165,8 +170,8 @@ public class EitDataActivity extends BaseActivity implements View.OnClickListene
                             mEtxtAddEn.getText().toString()
                     );
                 }
-                if(mFragmentPosition==4){
-                    mUpdateEditPresenter.requestUpdateCategoy(
+                if (mFragmentPosition == 4) {
+                    mUpdateEditPresenter.requestUpdateCategory(
                             mCategoryId,
                             mPart_image,
                             mActualImageFile,
@@ -183,9 +188,10 @@ public class EitDataActivity extends BaseActivity implements View.OnClickListene
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/*");
         startActivityForResult(intent, PICK_IMAGE_REQUEST);
-            mTxtCase.setText(R.string.sellected_image);
+        mTxtCase.setText(R.string.sellected_image);
 
     }
+
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -199,7 +205,7 @@ public class EitDataActivity extends BaseActivity implements View.OnClickListene
             try {
                 Uri imageData = data.getData();
                 String[] imageProjection = {MediaStore.Images.Media.DATA};
-                Cursor cursor =getContentResolver().query(Objects.requireNonNull(imageData), imageProjection, null, null, null);
+                Cursor cursor = getContentResolver().query(Objects.requireNonNull(imageData), imageProjection, null, null, null);
 
                 if (cursor != null) {
                     cursor.moveToFirst();

@@ -13,23 +13,23 @@
         android:layout_height="match_parent"
         android:background="@color/white"
         android:orientation="vertical">
-      <!--  <com.delivery.arish.arishdelivery.util.DynamicHeightNetworkImageView
-            android:id="@+id/image_details_item"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/network_image_height"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/details_itemlist_layout_margin"
-            android:layout_marginTop="@dimen/details_itemlist_layout_margin"
-            android:scaleType="centerCrop" />-->
+        <!--  <com.delivery.arish.arishdelivery.util.DynamicHeightNetworkImageView
+              android:id="@+id/image_details_item"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/network_image_height"
+              android:layout_gravity="center"
+              android:layout_margin="@dimen/details_itemlist_layout_margin"
+              android:layout_marginTop="@dimen/details_itemlist_layout_margin"
+              android:scaleType="centerCrop" />-->
         <!--suppress AndroidLintContentDescription -->
-       <ImageView
+        <ImageView
             android:id="@+id/image_rest_item"
             android:layout_width="match_parent"
-           android:layout_height="@dimen/network_image_height"
+            android:layout_height="@dimen/network_image_height"
             android:layout_margin="@dimen/details_itemlist_layout_margin"
             android:layout_marginTop="@dimen/details_itemlist_layout_margin"
             android:layout_gravity="center"
-           android:adjustViewBounds="true"
+            android:adjustViewBounds="true"
             android:scaleType="centerCrop" />
 
         <TextView

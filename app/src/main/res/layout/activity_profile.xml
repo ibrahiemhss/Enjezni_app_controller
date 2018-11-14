@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.log_in.ProfileActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/profile_pp_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/profile_collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_holder_profile"
+                    android:layout_width="@dimen/profile_circleimageview_width"
+                    android:layout_height="@dimen/profile_circleimageview_height"
+                    android:layout_marginTop="?android:attr/actionBarSize"
+                    android:layout_marginBottom="@dimen/lgn_container_bottom_margin"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/profile_circleimageview_side_margin"
+                    android:layout_marginRight="@dimen/profile_circleimageview_side_margin"
+                    app:civ_border_width="2dp"
+                    android:layout_gravity="center"
+                    app:civ_border_color="@color/white" />
+
+                <ImageView
+                    android:id="@+id/img_edit_prf"
+                    android:layout_width="@dimen/profile_img_edit_width"
+                    android:layout_height="@dimen/profile_img_edit_height"
+                    android:layout_below="@+id/img_holder_profile"
+                    android:layout_marginTop="?android:attr/actionBarSize"
+                    android:layout_toRightOf="@+id/img_holder_profile"
+                    android:layout_alignParentTop="true"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_camera"
+                    android:layout_toEndOf="@+id/img_holder_profile"
+                    android:contentDescription="@string/img_update_prf_content_description" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/profile_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_scrolling_profile" />
+
+
+</android.support.design.widget.CoordinatorLayout>
