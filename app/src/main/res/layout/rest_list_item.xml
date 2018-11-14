@@ -1,0 +1,53 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/details_itemlist_layout_margin"
+    android:clickable="true"
+    android:clipToPadding="false"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:id="@+id/LinearListRestContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+      <!--  <com.delivery.arish.arishdelivery.util.DynamicHeightNetworkImageView
+            android:id="@+id/image_details_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/network_image_height"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/details_itemlist_layout_margin"
+            android:layout_marginTop="@dimen/details_itemlist_layout_margin"
+            android:scaleType="centerCrop" />-->
+        <!--suppress AndroidLintContentDescription -->
+       <ImageView
+            android:id="@+id/image_rest_item"
+            android:layout_width="match_parent"
+           android:layout_height="@dimen/network_image_height"
+            android:layout_margin="@dimen/details_itemlist_layout_margin"
+            android:layout_marginTop="@dimen/details_itemlist_layout_margin"
+            android:layout_gravity="center"
+           android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/name_rest_item"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:maxLines="4"
+            android:textAlignment="center"
+            android:paddingBottom="@dimen/details_itemlist_text_bottom_margin"
+            android:paddingLeft="@dimen/details_itemlist_side_margin"
+            android:paddingRight="@dimen/details_itemlist_side_margin"
+            android:paddingTop="@dimen/details_itemlist_text_size"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
