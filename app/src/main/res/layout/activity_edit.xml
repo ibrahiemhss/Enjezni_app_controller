@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_group_a"
+    tools:context=".ui.add.EitDataActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_add"
+        android:layout_width="wrap_content"
+        android:layout_height="216dp"
+        android:layout_margin="@dimen/fr_add_img_side_margin"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_camera"/>
+    <TextView
+        android:id="@+id/txt_case_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:id="@+id/lin_add"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/fr_add_lin_side_margin"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fr_add_txt_side_margin"
+            android:padding="@dimen/fr_add_txt_padding"
+            android:textColor="@color/grey"
+            android:layout_gravity="center"
+            android:textSize="@dimen/fr_add_txt_size"
+            android:text="@string/add_rest_img"/>
+
+
+
+        <EditText
+            android:id="@+id/etx_ar_name"
+            android:layout_width="wrap_content"
+            android:layout_margin="@dimen/fr_add_etxt_side_margin"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:textSize="@dimen/fr_add_txt_size"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_ar_res"/>
+        <EditText
+            android:id="@+id/etx_en_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textSize="@dimen/fr_add_txt_size"
+            android:layout_margin="@dimen/fr_add_etxt_side_margin"
+            android:hint="@string/add_en_res"/>
+        <Button
+            android:id="@+id/btn_add_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/fr_add_btn_side_margin"
+            android:background="@drawable/button_back"
+            android:text="@string/add_new"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
